@@ -1,0 +1,95 @@
+/**!
+ * @package    Simple Chat
+ * @filename  base.css
+ * @version   1.0
+ * @author    Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+ * @date      30.09.2021 19:33:29 -04
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 1rem;
+	color: #25233C;
+	overflow-x: hidden;
+}
+
+.container {
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto
+}
+
+.chat-content {
+	display: flex;
+	flex-flow: column;
+	align-items: flex-end;
+	padding: 1rem 1.875rem;
+	border: 1px solid #d7d7ff;
+	background-color: #FFFFFF;
+	margin-top: 20px;
+}
+
+.chat-content .message + .message {
+	margin-top: 10px;
+}
+
+.chat-content .message.is-to {
+	max-width: 90%;
+}
+
+.chat-content .message.is-to .text {
+	position: relative;
+	background: #f0f0ff;
+	padding: 0.938rem 1.25rem;
+	font-size: 0.938rem;
+	font-weight: 300;
+	border-radius: 4px;
+}
+
+.chat-content .message.is-to .text::after {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	margin-top: -8px;
+	border-width: 8px;
+	border-style: solid;
+	border-color: transparent transparent transparent #f0f0ff;
+}
+
+.chat-content .message.is-from {
+	align-self: start;
+}
+
+.chat-content .message.is-from .text {
+	position: relative;
+	background: rgba(230, 60, 31, 0.2);
+	padding: 0.938rem 1.25rem;
+	font-size: 0.938rem;
+	font-weight: 300;
+	border-radius: 4px;
+}
+.chat-content .message.is-from .text::after {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -8px;
+	border-width: 8px;
+	border-style: solid;
+	border-color: transparent rgba(230, 60, 31, 0.2) transparent transparent;
+}
+
+.chat-foot input {
+	width: 100%;
+	border: 1px solid #d7d7ff;
+	border-top: none;
+	font-size: 0.938rem;
+	padding: 0.4rem;
+}
